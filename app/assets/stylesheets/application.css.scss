@@ -2,9 +2,13 @@
  *= require_tree .
  *= require_self
  */
- 
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+#combobox {
+    height: 200px;
+}
 
 #logo {
 	font-size: 26px;
