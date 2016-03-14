@@ -18,5 +18,11 @@
         <%= link.get_downvotes.size %>
       <% end %>
     </div>
+    <br />
+    <div class="pull-right">
+      <% link.categories.each do |category| %>
+        <%= link_to category.name, "#", class: "label label-primary" %>
+      <% end %>
+    </div>
   </div>
 <% end %>
