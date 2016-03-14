@@ -3,4 +3,12 @@
 A simple application that allows users to add useful links, comment and vote on them.
 
 Ruby version = 2.3.0
+
 Rails version = 4.2.5.1
+
+
+Run application:
+* get to the app directory
+* bundle install
+* rake db:migrate
+* rails server
