@@ -3,7 +3,8 @@ class LinksController < ApplicationController
   before_filter :authenticate_user!, except: [:index, :show]
 
   def index
-    @links = Link.all
+    @links = Link.includes(:categories).
+      search(params[:keyword])
   end
 
   def show

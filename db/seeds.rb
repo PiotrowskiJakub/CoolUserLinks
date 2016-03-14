@@ -1,3 +1,4 @@
+Link.destroy_all
 Category.destroy_all
 
 Category.create!([{
