@@ -2,9 +2,9 @@
   <div class='col-sm-12'>
     <p>
       <form>
-        <legend>Search</legend>
+        <legend>Search by categories</legend>
         <div class='col-xs-4'>
-          <input type='text' class='form-control' value='<%= params[:keyword] %>' name='keyword' placeholder='Keyword' >
+          <input type='text' class='form-control' value='<%= params[:keyword] %>' name='keyword' placeholder='Category' >
         </div>
       </form>
     </p>
@@ -19,7 +19,7 @@
     </h2>
 
     <div class="btn-group">
-      <a class="btn btn-default btn-sm" href="<%= link.url %>">Visit Link</a>
+      <a class="btn btn-default btn-sm" target="_blank" href="<%= link.url %>">Visit Link</a>
       <%= link_to like_link_path(link), method: :put, class: "btn btn-default btn-sm" do %>
         <span class="glyphicon glyphicon-chevron-up"></span>
         Upvote

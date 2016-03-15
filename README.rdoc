@@ -11,4 +11,5 @@ Run application:
 * get to the app directory
 * bundle install
 * rake db:migrate
+* rake db:seed
 * rails server
