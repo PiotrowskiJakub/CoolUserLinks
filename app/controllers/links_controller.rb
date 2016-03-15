@@ -4,7 +4,7 @@ class LinksController < ApplicationController
 
   def index
     @links = Link.includes(:categories).
-      search(params[:keyword])
+      search(params[:keyword]).sort_by{|l| l.get_likes.size - l.get_dislikes.size}.reverse
   end
 
   def show

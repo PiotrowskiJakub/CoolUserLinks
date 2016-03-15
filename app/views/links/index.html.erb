@@ -4,14 +4,14 @@
       <form>
         <legend>Search by categories</legend>
         <div class='col-xs-4'>
-          <input type='text' class='form-control' value='<%= params[:keyword] %>' name='keyword' placeholder='Category' >
+          <input type='search' class='form-control' value='<%= params[:keyword] %>' name='keyword' placeholder='Category' >
         </div>
       </form>
     </p>
   </div>
 </div>
 
-<% @links.sort_by{|l| l.get_likes.size}.reverse.each do |link| %>
+<% @links.each do |link| %>
   <div class="link row clearfix">
     <h2>
       <%= link_to link.title, link %><br>
@@ -34,7 +34,7 @@
     <br />
     <div class="pull-right">
       <% link.categories.each do |category| %>
-        <%= link_to category.name, "#", class: "label label-primary" %>
+        <%= link_to category.name, "?keyword=#{category.name.downcase}", class: "label label-primary" %>
       <% end %>
     </div>
   </div>
