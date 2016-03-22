@@ -15,6 +15,7 @@ gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 gem 'acts_as_votable', '~> 0.10.0'
 gem 'simple_form', '~> 3.2', '>= 3.2.1'
 gem 'rename', '~> 1.0', '>= 1.0.2'
+gem 'rails_12factor', group: :production
 
 group :development, :test do
   gem 'byebug'
@@ -24,3 +25,5 @@ group :development do
   gem 'web-console', '~> 2.0'
   gem 'spring'
 end
+
+ruby "2.3.0"
